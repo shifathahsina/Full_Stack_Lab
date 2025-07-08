@@ -1,0 +1,29 @@
+<!-- views/students.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>All Students</h1>
+  
+  <ul>
+  <% students.forEach(student => { %>
+    <li class="student-card">
+      <div class="student-details">
+        <div class="student-name"><%= student.name %></div>
+        <div class="student-email">📧 <%= student.email %></div>
+        <div class="student-dept">🎓 <%= student.dept %></div>
+      </div>
+      <form action="/students/<%= student._id %>?_method=DELETE" method="POST">
+        <button class="delete-btn">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
+
+  <center><h3><a href="/">← Add New Student</a></h3></center>
+</body>
+</html>

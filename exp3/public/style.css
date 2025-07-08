@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #5a189a;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+/* Card Layout */
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.student-card {
+  background-color: #ffffff;
+  margin: 16px 0;
+  padding: 20px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.student-card:hover {
+  transform: scale(1.01);
+}
+
+/* Student Info Styling */
+.student-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.student-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #5a189a;
+}
+
+.student-email,
+.student-dept {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Button container inside card */
+.student-card form {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 8px 18px;
+  width: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.delete-btn:hover {
+  background-color: #d62828;
+}
+
+/* Better Form Page Layout */
+form:not(.student-card form) {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #5a189a;
+}
+
+/* Submit Button in Form */
+form:not(.student-card form) button {
+  width: 100%;
+  background: #5a189a;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form:not(.student-card form) button:hover {
+  background-color: #7b2cbf;
+}
+
+/* Back Link */
+.back-link {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5a189a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.back-link:hover {
+  color: #7b2cbf;
+  transform: translateX(-3px);
+}

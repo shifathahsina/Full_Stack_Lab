@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= (typeof student !== 'undefined' && student) ? 'Edit Student' : 'Add Student' %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= (typeof student !== 'undefined' && student) ? 'Edit Student' : 'Add Student' %></h1>
+
+  <form action="<%= (typeof student !== 'undefined' && student) ? '/students/' + student._id + '?_method=PUT' : '/students' %>" method="POST">
+    <input type="text" name="name" placeholder="Name" value="<%= student ? student.name : '' %>" required>
+    <input type="email" name="email" placeholder="Email" value="<%= student ? student.email : '' %>" required>
+    <input type="text" name="dept" placeholder="Department" value="<%= student ? student.dept : '' %>" required>
+    <button type="submit"><%= student ? 'Update Student' : 'Add Student' %></button>
+  </form>
+
+  <a class="back-link" href="/students">← View All Students</a>
+</body>
+</html>
